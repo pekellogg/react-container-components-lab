@@ -35,8 +35,8 @@
     "sinon": "^6.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "mocha --timeout 5000 -w test/helpers.js test/*.js",
     "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
     "test:watch": "npm run test -- --watch",
